@@ -40,44 +40,42 @@ object manzana {
 		return base * madurez
 	}
 
-	object pepon {
+object pepon {
 
-  var energia = 30
+	var energia = 30
 
-  method energia() {
-    return energia
-  }
+	method energia() {
+    	return energia
+	}
 
-  method comer(alimento) {
-    energia = energia + (alimento.energiaQueAporta() / 2) 
-    return energia
-  }
+	method comer(alimento) {
+    	energia = energia + (alimento.energiaQueAporta() / 2) 
+    	return energia
+	}
 
-  method volar(distancia) {
-    energia = energia - 20 - (distancia * 2)
-  }
-  
+	method volar(distancia) {
+    	energia = energia - 20 - (distancia * 2)
+	}
 }
 
 object roque {
   
-  var ave = pepita
-  var cantidadCenas = 0
+	var ave = pepita
+	var cantidadCenas = 0
 
 
-  method elegirAve(_ave) {
-    ave = _ave
-    cantidadCenas = 0
-    return ave
-  }
+	method elegirAve(_ave) {
+    	ave = _ave
+    	cantidadCenas = 0
+    	return ave
+	}
 
-  method alimentar(alimento) {
-    cantidadCenas = cantidadCenas + 1
-    return ave.comer(alimento)
-  }
+	method alimentar(alimento) {
+		cantidadCenas = cantidadCenas + 1
+    	return ave.comer(alimento)
+	}
   
-  method cenas() {
-    return cantidadCenas
-  }
-  
+	method cenas() {
+		return cantidadCenas
+	}
 }
